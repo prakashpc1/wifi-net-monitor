@@ -13,7 +13,7 @@ The Network Monitor App is an Android application designed to provide comprehens
 ## Installation
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   https://github.com/prakashpc1/wifi-net-monitor.git
    ```
 2. Open the project in your preferred IDE.
 3. Ensure you have the latest version of Android Studio and the necessary SDKs installed.

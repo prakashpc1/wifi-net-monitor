@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
@@ -9,6 +10,7 @@ android {
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -30,8 +32,14 @@ dependencies {
     implementation 'androidx.compose.ui:ui-tooling-preview:1.4.0'
     implementation 'androidx.activity:activity-compose:1.6.1'
     implementation 'androidx.navigation:navigation-compose:2.6.0'
-}
-
-kapt {
-    correctErrorTypes = true
+    implementation "androidx.security:security-crypto:1.0.0"
+    implementation "androidx.work:work-runtime-ktx:2.8.1" // Check for latest version
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.4.0" // Use your Compose version
+    debugImplementation "androidx.compose.ui:ui-test-manifest:1.4.0" // Use your Compose version
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.mockito:mockito-core:4.5.1" // Or mockito-kotlin
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4" // For testing coroutines
+    testImplementation "androidx.arch.core:core-testing:2.2.0" // For LiveData testing
 }
